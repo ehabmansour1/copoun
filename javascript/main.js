@@ -21,8 +21,13 @@ paragraphs.forEach((paragraph) => {
     document.body.removeChild(tempTextarea);
 
     // Log a message to the console
-    console.log("Copied to clipboard:", paragraph.innerHTML).then((result) => {
-      if (result) {
+    console.log("Copied to clipboard:", paragraph.innerHTML);
+    Swal.fire({
+      title: "تم نسخ الكود بنجاح",
+      text: " اضغط موافق واستمتع بالخصم",
+      icon: "success",
+    }).then((result) => {
+      if (result.isConfirmed) {
         window.location.href = "https://ar.thegivingmovement.com/";
       }
     });
