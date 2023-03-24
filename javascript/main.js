@@ -22,7 +22,7 @@ paragraphs.forEach((paragraph) => {
 
     // Log a message to the console
     console.log("Copied to clipboard:", paragraph.innerHTML).then((result) => {
-      if (result.isConfirmed) {
+      if (result) {
         window.location.href = "https://ar.thegivingmovement.com/";
       }
     });
